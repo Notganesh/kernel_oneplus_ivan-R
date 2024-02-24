@@ -7,7 +7,7 @@ ccache -M 25G
 TANGGAL=$(date +"%Y%m%d-%H")
 export ARCH=arm64
 export KBUILD_BUILD_HOST=android-build
-export KBUILD_BUILD_USER="kardebayan"
+export KBUILD_BUILD_USER="Notganesh"
 clangbin=clang/bin/clang
 if ! [ -a $clangbin ]; then git clone --depth=1 https://github.com/crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-6443078 clang
 fi
@@ -18,7 +18,7 @@ gcc32bin=gcc32/bin/arm-linux-androideabi-as
 if ! [ -a $gcc32bin ]; then git clone --depth=1 https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9 gcc32
 fi
 rm -rf AnyKernel
-make O=out ARCH=arm64 oplus6877_defconfig
+make O=out ARCH=arm64 lineage-ivan_defconfig
 PATH="${PWD}/clang/bin:${PATH}:${PWD}/gcc32/bin:${PATH}:${PWD}/gcc64/bin:${PATH}" \
 make -j$(nproc --all) O=out \
                       ARCH=arm64 \
@@ -40,7 +40,7 @@ echo -e " Kernel Compile Successful"
 git clone --depth=1 https://github.com/Notganesh/AnyKernel3.git AnyKernel
 cp out/arch/arm64/boot/Image.gz AnyKernel
 cd AnyKernel
-zip -r9 Hydrogen-oss-${TANGGAL}.zip *
+zip -r9 Lineage-Plus-oss-ivan-${TANGGAL}.zip *
 cd ../
 fi
 }
