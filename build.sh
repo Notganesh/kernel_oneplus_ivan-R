@@ -7,7 +7,7 @@ ccache -M 25G
 TANGGAL=$(date +"%Y%m%d-%H")
 export ARCH=arm64
 export KBUILD_BUILD_HOST=android-build
-export KBUILD_BUILD_USER="kardebayan"
+export KBUILD_BUILD_USER="Notganesh"
 clangbin=clang/bin/clang
 if ! [ -a $clangbin ]; then git clone --depth=1 https://github.com/crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-6443078 clang
 fi
@@ -38,9 +38,9 @@ echo  " Failed To Compile Kernel"
 else
 echo -e " Kernel Compile Successful"
 git clone --depth=1 https://github.com/Notganesh/AnyKernel3.git AnyKernel
-cp out/arch/arm64/boot/Image.gz AnyKernel
+cp out/arch/arm64/boot/Image.gz-dtb AnyKernel
 cd AnyKernel
-zip -r9 Hydrogen-oss-${TANGGAL}.zip *
+zip -r9 Lineage-plus-oss-ivan.zip *
 cd ../
 fi
 }
