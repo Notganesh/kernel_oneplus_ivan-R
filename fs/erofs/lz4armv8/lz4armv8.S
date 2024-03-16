@@ -229,10 +229,6 @@ Copy_offset_ge_match_loop:
 .text
 .p2align 4
 
-ENTRY(_lz4_decompress_asm)
-	lz4_decompress_asm_generic
-ENDPROC(_lz4_decompress_asm)
-
 Failed:
 	mov	tmp, #-1
 	b	Exit_here
@@ -292,6 +288,3 @@ Copylength_table:
 
 .text
 .p2align 4
-ENTRY(_lz4_decompress_asm_noprfm)
-	lz4_decompress_asm_generic	0
-ENDPROC(_lz4_decompress_asm_noprfm)
