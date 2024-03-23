@@ -1026,7 +1026,7 @@ gpio_goodix_cs_func: gpio_goodix_cs_func {
 
 //#endif
 
-#include <oplus6877_20181/cust.dtsi>
+#include "mediatek/oplus6877/20181/cust.dtsi"
 #include "mediatek/cust_mt6877_oplus_garen_charge.dtsi"
 #include "mediatek/cust_mt6877_touch_1080x2300.dtsi"
 #include "mediatek/cust_mt6877_camera.dtsi"
