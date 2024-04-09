@@ -178,7 +178,7 @@ typedef struct {
     unsigned char       Sensor[256];
 } sensor_config_info_t;
 
-__attribute__((weak)) unsigned int get_project() {
+__attribute__((weak)) unsigned int get_project(void) {
     return -1;
 }
 
@@ -1501,7 +1501,7 @@ int get_msensor_parameter(int num)
     return 0;
 }
 
-void  mag_soft_parameter_init()
+void  mag_soft_parameter_init(void)
 {
     int ret = -1;
     int index = 0;

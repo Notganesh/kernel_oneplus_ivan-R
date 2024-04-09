@@ -265,7 +265,7 @@ const char *mt6358_irq_get_name(struct device *dev, unsigned int hwirq)
 EXPORT_SYMBOL(mt6358_irq_get_name);
 
 
-void callback( )
+void callback(void)
 {
     struct timeval tv;
     
