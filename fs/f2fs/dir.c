@@ -1026,7 +1026,7 @@ int f2fs_fill_dentries(struct dir_context *ctx, struct f2fs_dentry_ptr *d,
 		}
 
 		if (IS_ENCRYPTED(d->inode)) {
-
+		
 			int save_len = fstr->len;
 
 			err = fscrypt_fname_disk_to_usr(d->inode,
