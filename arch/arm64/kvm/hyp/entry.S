@@ -83,6 +83,8 @@ ENTRY(__guest_enter)
 1:
 	add	x18, x0, #VCPU_CONTEXT
 
+	add	x29, x0, #VCPU_CONTEXT
+
 	// Restore guest regs x0-x17
 	ldp	x0, x1,   [x29, #CPU_XREG_OFFSET(0)]
 	ldp	x2, x3,   [x29, #CPU_XREG_OFFSET(2)]
